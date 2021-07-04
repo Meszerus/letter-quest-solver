@@ -1,7 +1,3 @@
-$("#toggleAchievementsPanel").click(function() {
-    toggleAchievementPanel();
-});
-
 $("input[name='achievement']").change(function() {
     updateAchievementArray($(this));
 });
@@ -14,7 +10,7 @@ $("#configAchievementsNone").click(function() {
     updateAchievementTogglesAsBlanket(false);
 });
 
-$(".tablink").click(function() {
+$("button[name='mode-change-action']").click(function() {
     resetSelectedPanel();
     changeSelectedPanel($(this));
 });

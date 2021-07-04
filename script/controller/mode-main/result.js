@@ -1,16 +1,11 @@
 const getMainResults = () => {
     resetMainResults();
-    setInfo("Solving. Please wait.");
 
     const results = solveMain(getLetterWeight(), getPrioritySetting(), getSpecificLetterPrioritySetting());
 
     if(results.length > 0) {
         $("#mode_main table[name='results'] tr[name='heading']").show();
-        setInfo("Solved. Picking best options. Please wait.");
         addMainResults(sortResults(results));
-        setInfo("Please select a solution.");
-    } else {
-        setInfo("No solutions found.");
     }
 };
 
@@ -49,7 +44,6 @@ const useResult = ($result) => {
     });
 
     resetMainResults();
-    setInfo("Please update the new tiles to play with.");
 };
 
 const addHighlights = ($result) => {
@@ -84,7 +78,7 @@ const addDemandForNewLetter = ($letter) => {
 };
 
 const resetDemandForNewLetters = () => {
-    $("input[name='letter']").each(function() {
+    $("input[name='letter-input']").each(function() {
         $(this).parent().parent().removeClass("demand");
     });
 };

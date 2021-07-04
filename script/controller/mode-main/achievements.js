@@ -36,12 +36,6 @@ const saveAchievementsToggle = () => {
         { expires: 365, path: "/letter-quest-solver" });
 };
 
-const toggleAchievementPanel = () => {
-    $("#achievements").slideToggle(500, function() {
-        $(this).is(":visible") ? $("#toggleAchievements").text("hide") : $("#toggleAchievements").text("show");
-    });
-};
-
 const updateAchievementArray = ($achievement) => {
     achievements[$achievement.val()] = $achievement.prop("checked");
     saveAchievementsToggle();

@@ -1,4 +1,4 @@
-$("#mode_main div[name='gameplay']").on("keyup", "input[name='letter']", function() {
+$("input[name='letter-input']").on("keyup", function() {
     focusNextEmptyLetter($(this));
 });
 
@@ -27,14 +27,12 @@ $("#mode_main table[name='results']").on("click", "button", function() {
 });
 
 $("#mode_main button[name='solve']").click(function() {
-    resetInfo();
     popDetectedAchievements();
     resetDemandForNewLetters();
     getMainResults();
 });
 
-$("#mode_main button[name='reset']").click(function() {
-    resetInfo();
+$("#main-mode-actions button[name='reset-action']").click(function() {
     resetLetters();
     resetDemandForNewLetters();
     resetMainResults();

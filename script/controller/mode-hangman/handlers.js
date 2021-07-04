@@ -23,12 +23,10 @@ $("#mode_hangman table[name='results']").on("mouseout", "td", function() {
 });
 
 $("#mode_hangman button[name='solve']").click(function() {
-    resetInfo();
     getHangmanResults();
 });
 
 $("#mode_hangman button[name='reset']").click(function() {
-    resetInfo();
     resetGuess();
     resetHangmanResults();
     resetHangmanLetters();

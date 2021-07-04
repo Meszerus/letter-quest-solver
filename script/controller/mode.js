@@ -9,5 +9,5 @@ const changeSelectedPanel = ($tab) => {
 };
 
 const showMainModePanel = () => {
-  $("#tabs button[name='main']").trigger("click");
+  $("nav button[name='main']").trigger("click");
 };
