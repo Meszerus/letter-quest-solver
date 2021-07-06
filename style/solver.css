@@ -72,3 +72,27 @@ section.achievements {
 .solutions-table {
     display: none;
 }
+
+button.crystal-option {
+    color: cornflowerblue;
+}
+
+input.crystal {
+    background-color: cornflowerblue;
+}
+
+button.plagued-option {
+    color: indianred;
+}
+
+input.plagued {
+    background-color: indianred;
+}
+
+button.avoid-option {
+    color: grey;
+}
+
+input.avoid {
+    background-color: grey;
+}

@@ -2,16 +2,8 @@ $("input[name='letter-input']").on("keyup", function() {
     focusNextEmptyLetter($(this));
 });
 
-$("#mode_main div[name='gameplay']").on("click", "button[name='crystal']", function() {
-    toggleEffect($(this), CRYSTAL);
-});
-
-$("#mode_main div[name='gameplay']").on("click", "button[name='plagued']", function() {
-    toggleEffect($(this), PLAGUED);
-});
-
-$("#mode_main div[name='gameplay']").on("click", "button[name='avoid']", function() {
-    toggleEffect($(this), AVOID);
+$("button[name='tile-effect']").on("click", function() {
+    toggleEffect($(this));
 });
 
 $("#mode_main table[name='results']").on("mouseover", "td", function() {
