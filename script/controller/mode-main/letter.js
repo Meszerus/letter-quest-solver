@@ -48,13 +48,13 @@ const focusNextEmptyLetter = ($letterInput) => {
 };
 
 const getLetterElement = (index) => {
-    return $($("input[name='letter']")[index]);
+    return $($("input[name='letter-input']")[index]);
 }
 
 const getLetterWeight = () => {
     const letterWeight = [ ];
 
-    $("input[name='letter']").each(function(index) {
+    $("input[name='letter-input']").each(function(index) {
         const $letter = $(this);
         letterWeight.push({
             id: index,

@@ -4,7 +4,7 @@ const getMainResults = () => {
     const results = solveMain(getLetterWeight(), getPrioritySetting(), getSpecificLetterPrioritySetting());
 
     if(results.length > 0) {
-        $("#mode_main table[name='results'] tr[name='heading']").show();
+        $("#main-mode-container table[name='solutions-table']").show();
         addMainResults(sortResults(results));
     }
 };
@@ -18,7 +18,7 @@ const sortResults = (results) => {
 const addMainResults = (results) => {
     for(let i = 0; i < 5; i++) {
         if(results[i]) {
-            $("#mode_main table[name='results']").append($(
+            $("#main-mode-container table[name='solutions-table']").append($(
                     `<tr name="result" data-ids=",${results[i].matchIndexes},">
                         <td>${results[i].word}</td>
                         <td>
@@ -28,14 +28,14 @@ const addMainResults = (results) => {
         }
     }
 
-    $("#mode_main table[name='results']").removeClass("invisible");
+    $("#main-mode-container table[name='solutions-table']").removeClass("invisible");
 };
 
 const useResult = ($result) => {
     const idsUsed = $result.parent().parent().attr("data-ids");
 
-    $("input[name='letter']").each(function() {
-        const thisLetterId = $(this).parent().parent().attr("data-id");
+    $("input[name='letter-input']").each(function() {
+        const thisLetterId = $(this).parent().parent().attr("data-tile-id");
 
         if(idsUsed.includes("," + thisLetterId + ",")) {
             resetLetter($(this));
@@ -49,8 +49,8 @@ const useResult = ($result) => {
 const addHighlights = ($result) => {
     const idsUsed = $result.parent().attr("data-ids");
 
-    $("input[name='letter']").each(function() {
-        const thisLetterId = $(this).parent().parent().attr("data-id");
+    $("input[name='letter-input']").each(function() {
+        const thisLetterId = $(this).parent().parent().attr("data-tile-id");
 
         if(idsUsed.includes("," + thisLetterId + ",")) {
             $(this).addClass("highlight");
@@ -63,13 +63,13 @@ const resetHighlight = ($letter) => {
 };
 
 const resetHighlights = () => {
-    $("input[name='letter']").each(function() {
+    $("input[name='letter-input']").each(function() {
         resetHighlight($(this));
     });
 };
 
 const resetMainResults = () => {
-    $("#mode_main table[name='results']").addClass("invisible");
+    $("#main-mode-container table[name='solutions-table']").addClass("invisible");
     $("#mode_main tr[name='result']").remove();
 };
 

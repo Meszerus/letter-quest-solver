@@ -6,19 +6,19 @@ $("button[name='tile-effect']").on("click", function() {
     toggleEffect($(this));
 });
 
-$("#mode_main table[name='results']").on("mouseover", "td", function() {
+$("#main-mode-container table[name='solutions-table']").on("mouseover", "td", function() {
     addHighlights($(this));
 });
 
-$("#mode_main table[name='results']").on("mouseout", "td", function() {
+$("#main-mode-container table[name='solutions-table']").on("mouseout", "td", function() {
     resetHighlights();
 });
 
-$("#mode_main table[name='results']").on("click", "button", function() {
+$("#main-mode-container table[name='solutions-table']").on("click", "button", function() {
     useResult($(this));
 });
 
-$("#mode_main button[name='solve']").click(function() {
+$("#main-mode-actions button[name='solve-action']").click(function() {
     popDetectedAchievements();
     resetDemandForNewLetters();
     getMainResults();
