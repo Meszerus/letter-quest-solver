@@ -51,7 +51,7 @@ const addHighlights = ($result) => {
 
     $("input[name='letter-input']").each(function() {
         const thisLetterId = $(this).parent().parent().attr("data-tile-id");
-
+        
         if(idsUsed.includes("," + thisLetterId + ",")) {
             $(this).addClass("highlight");
         }
@@ -70,7 +70,7 @@ const resetHighlights = () => {
 
 const resetMainResults = () => {
     $("#main-mode-container table[name='solutions-table']").addClass("invisible");
-    $("#mode_main tr[name='result']").remove();
+    $("#main-mode-container tr[name='result']").remove();
 };
 
 const addDemandForNewLetter = ($letter) => {

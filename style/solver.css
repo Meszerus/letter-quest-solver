@@ -4,6 +4,7 @@
 
 body {
     margin: 0%;
+    background-color: darkgray;
 }
 
 section.container {
@@ -52,6 +53,8 @@ input.letter-input {
     font-variant: all-small-caps;
     text-align: center;
     width: 100%;
+    border-color: inherit;
+    border-width: medium;
 }
 
 section.solutions {
@@ -95,4 +98,20 @@ button.avoid-option {
 
 input.avoid {
     background-color: grey;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.highlight {
+    border-color: var(--highlight-color) !important;
+}
+
+tr[name='result'] {
+    height: 60px;
+}
+
+tr[name='result'] td {
+    border-bottom: 1px solid #ddd;
 }
