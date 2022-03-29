@@ -22,17 +22,26 @@ section.mode {
     align-items: center;
     display: grid;
     grid-auto-rows: minmax(40px, auto);
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     justify-items: center;
 }
 
-section.problem {
+#main-mode-container section.problem {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
 }
 
-section.letter-tile {
+#hangman-mode-container section.problem {
+    display: flex;
+}
+
+#hangman-mode-container section.conditions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#main-mode-container section.letter-tile {
     display: grid;
     padding: 3%;
     width: 80%;
@@ -48,11 +57,20 @@ section.effects {
     flex-flow: column;
 }
 
-input.letter-input {
+#main-mode-container input.letter-input {
     font-size: 400%;
     font-variant: all-small-caps;
     text-align: center;
     width: 100%;
+    border-color: inherit;
+    border-width: medium;
+}
+
+#hangman-mode-container input.letter-input {
+    font-size: 200%;
+    font-variant: all-small-caps;
+    text-align: center;
+    width: 80%;
     border-color: inherit;
     border-width: medium;
 }
