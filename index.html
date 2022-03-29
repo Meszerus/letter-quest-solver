@@ -10,7 +10,9 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
                 crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"
+                integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg="
+                crossorigin="anonymous"></script>
         <script src="./script/controller/init.js"></script>
     </head>
     <body>
@@ -166,7 +168,7 @@
                             <option selected value="none"></option>
                             <!-- Populated at runtime -->
                         </select>
-                        <select id="priority-specified-letter">
+                        <select id="priority-specified-letter" style="display: none;">
                             <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
                             <option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option>
                             <option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option>
@@ -225,7 +227,7 @@
                </section>
                 <section id="achievements" class="achievements">
                     <div class="achievement-intro">
-                        <p>Select only the achievements you have yet to unlock, so the tool can be quicker and better prioritise solutions, and you can pop them quicker.</p>
+                        <p>Select only the achievements you have yet to unlock, so the tool can better prioritise solutions, and you can pop them quicker.</p>
                     </div>
                     <div class="achievement">
                         <input type="checkbox" id="achievement_allPlaguedOut" name="achievement" value="allPlaguedOut" checked="checked" />
