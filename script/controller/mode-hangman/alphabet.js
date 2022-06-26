@@ -9,7 +9,7 @@ const enableLetter = ($this) => {
 const disableLetter = ($this) => {
   let alreadyUsedLetter;
 
-  $("#hangman-mode-container input[name='guessLetter']").each(function() {
+  $("#hangman-mode-container input[name='letter-input']").each(function() {
     if($(this).val().toLowerCase() === $this.text().toLowerCase()) {
       alreadyUsedLetter = true;
     }

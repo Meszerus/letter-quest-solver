@@ -1,8 +1,8 @@
-$("input[name='letter-input']").on("keyup", function() {
+$("#main-mode-container input[name='letter-input']").on("keyup", function() {
     focusNextEmptyLetter($(this));
 });
 
-$("button[name='tile-effect']").on("click", function() {
+$("#main-mode-container button[name='tile-effect']").on("click", function() {
     toggleEffect($(this));
 });
 
